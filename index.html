@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MariiFlix</title>
+
+    <!-- Link para a fonte Alatsi do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    
+    <!-- Link para a fonte Playpen Sans -->
+    <link href="https://fonts.cdnfonts.com/s/47659/Playpen-Sans.woff2" rel="stylesheet">
+
+    <style>
+        /* Estilo para o header com a fonte Alatsi e contorno branco */
+        header {
+            font-family: 'Alatsi', sans-serif; /* Usando a fonte Alatsi */
+            font-size: 5em; /* Tamanho grande da fonte */
+            position: absolute; /* Posiciona no canto superior esquerdo */
+            top: 20px; /* Ajusta a posição para melhor visualização */
+            left: 10px; /* Distância da esquerda */
+            color: #FFFFFF; /* Cor do texto (branco) */
+            display: flex; /* Usando flexbox para alinhar o texto e o triângulo */
+            align-items: center; /* Alinha verticalmente o texto e o triângulo */
+            padding-left: 20px; /* Cria um pequeno espaço à esquerda */
+            text-shadow: 
+                2px 2px 0px #fff, 
+                -2px -2px 0px #fff, 
+                2px -2px 0px #fff, 
+                -2px 2px 0px #fff; /* Contorno branco ao redor do texto */
+        }
+
+        /* Triângulo ao lado do texto "MariiFlix" */
+        .play-triangle {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent; /* Cria o topo do triângulo */
+            border-bottom: 20px solid transparent; /* Cria o fundo do triângulo */
+            border-left: 30px solid #FFFFFF; /* Cria a base do triângulo (direita) com a cor branca */
+            margin-left: 10px; /* Espaço entre o texto e o triângulo */
+        }
+
+        /* Estilo do corpo */
+        body {
+            font-family: Arial, sans-serif; /* Fonte padrão para o corpo */
+            padding-top: 120px; /* Ajusta o conteúdo para não ficar coberto pelo header */
+            display: flex;
+            flex-direction: column; /* Organiza os elementos em coluna */
+            align-items: center; /* Alinha os elementos ao centro */
+            margin: 0; /* Remove qualquer margem extra */
+            background-color: #181818; /* Cor de fundo alterada para #181818 */
+            color: #fff; /* Texto branco para contraste com o fundo escuro */
+        }
+
+        h1 {
+            font-family: 'Noto Sans Math', sans-serif; /* Usando a fonte Noto Sans Math */
+            font-size: 2.5em;
+            text-align: center;
+            width: 100%; /* Faz o título ocupar a largura total */
+            margin-bottom: 20px; /* Espaçamento inferior */
+            padding-left: 20px; /* Cria um pequeno espaço à esquerda */
+        }
+
+        /* Estilo para o parágrafo de "Críticas:" */
+        .críticas {
+            font-family: 'Playpen Sans', sans-serif; /* Usando a fonte Playpen Sans */
+            font-size: 1.5em; /* Tamanho do texto */
+            text-align: left; /* Alinha à esquerda */
+            width: 100%; /* Faz o parágrafo ocupar toda a largura */
+            margin-left: 0; /* Remove a margem à esquerda para encostar na borda */
+            margin-top: 20px; /* Espaço superior */
+            color: #FFFFFF; /* Cor branca para o texto */
+            text-decoration: underline; /* Adiciona o sublinhado */
+            padding-left: 20px; /* Distância para o texto não encostar na borda */
+        }
+
+        /* Estilo para o container dos vídeos */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os vídeos abaixo */
+            gap: 20px; /* Espaço entre os vídeos */
+            width: 80%; /* Largura do container */
+            max-width: 1200px; /* Limita a largura máxima */
+            margin-top: 30px; /* Espaçamento superior */
+        }
+
+        /* Estilo para o iframe (vídeo) */
+        iframe {
+            width: 80%; /* Largura do vídeo (80% da tela) */
+            max-width: 480px; /* Limita a largura máxima do vídeo */
+            height: 270px; /* Altura do vídeo proporcional */
+            border: 5px solid #fff; /* Contorno branco ao redor do vídeo */
+            border-radius: 10px; /* Bordas arredondadas */
+            object-fit: cover; /* Garante que o vídeo preencha a área sem distorcer */
+        }
+
+        /* Estilo para o link clicável */
+        a {
+            color: #007BFF; /* Cor azul para o link */
+            text-decoration: underline; /* Adiciona sublinhado */
+            font-size: 1.2em; /* Tamanho do texto */
+            margin-top: 20px; /* Espaçamento superior */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        MariiFlix
+        <div class="play-triangle"></div> <!-- Triângulo de play -->
+    </header>
+
+    <h1>Bem melhor que Netflix</h1>
+
+    <!-- Adicionando o parágrafo "Críticas:" à esquerda -->
+    <p class="críticas">Críticas e Resenhas de filmes e séries:</p>
+
+    <!-- Exibe o vídeo principal -->
+    <iframe src="https://www.youtube.com/embed/MV2cpO8nGrE" title="YouTube video player" allowfullscreen></iframe>
+
+    <!-- Container para os outros 4 vídeos -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Qq9KZFeONOk" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/slW4zIoZh3I" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/wDlQ6C-jXzg" title="YouTube video player" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/UDUCa_E3gws" title="YouTube video player" allowfullscreen></iframe>
+    </div>
+
+    <!-- Link clicável para o arquivo local -->
+    <a href="https://www.youtube.com/" target="_blank">
+        Acesse o youtube aqui
+    </a>
+</body>
+</html>
